@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{% block content %}
+          <div class="container mt-5">
+            {% for subtopic, requirements in subtopic_list.items() %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ subtopic }}</h5>
+                    
+                    <ul class="list-group list-group-flush">
+                        {% for requirement in requirements[0] %}
+                        <li class="list-group-item">
+                        <h5><a style="text-decoration: none" href="{{ url_for('topic_subtopic', topic_name=topic_name, requirement = requirement,subtopic=subtopic) }}">{{ requirement }}</a></h5>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        
+        
+
+
+          
+
+
+{% endblock %}

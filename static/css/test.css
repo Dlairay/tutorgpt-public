@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.video-box, .note-taking-box {
+    border: 1px solid #ddd;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.video-box {
+    height: 50%; /* Adjust based on your preference */
+}
+
+.note-taking-box {
+    flex-grow: 1;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.chat-box {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 50%; /* Ensures chat box takes up the remaining space */
+}
+
